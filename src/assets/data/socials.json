@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "fa-brands fa-instagram",
+    "href": "https://www.instagram.com/firas.zaazaa"
+  },
+  {
+    "icon": "fa-solid fa-envelope",
+    "href": "mailto:firas.zaazaa@gmail.com?Subject=Prenons%20contact"
+  },
+  {
+    "icon": "fa-brands fa-github",
+    "href": "https://github.com/metalnavy9666"
+  },
+  {
+    "icon": "fa-brands fa-linkedin",
+    "href": "https://www.linkedin.com/in/firas-zaazaa/"
+  },
+  {
+    "icon": "fa-solid fa-phone",
+    "href": "tel:+33616175795"
+  }
+]

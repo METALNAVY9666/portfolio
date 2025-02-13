@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@floating-ui/react": "^0.27.4",
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@mui/styled-engine": "^6.4.3",
+    "@mui/x-charts": "^7.26.0",
     "@turf/bbox": "^7.2.0",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
@@ -20,6 +24,7 @@
     "maplibre-gl": "^5.1.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^19.0.0",
     "react-simple-typewriter": "^5.0.1",
     "turf": "^3.0.14"

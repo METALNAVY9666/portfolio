@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { isBrowser } from "react-device-detect";
 import { Typewriter } from "react-simple-typewriter";
-import { colors } from "../basics";
 
 interface DataSnippetProps {
   getUrl?: string;
@@ -9,14 +9,6 @@ interface DataSnippetProps {
   delay: number;
   duration?: number;
   defaultValue?: number;
-}
-
-interface Skill {
-  text: string;
-  icon: string;
-  href?: string;
-  colorStart?: string;
-  colorEnd?: string;
 }
 
 function DataSnippet({
@@ -77,19 +69,6 @@ export default function FirstImpression() {
     },
   ];
 
-  const skills: Skill[] = [
-    {
-      text: "React TS",
-      icon: "fa-brands fa-react",
-      href: "https://react.dev/learn/typescript",
-    },
-    {
-      text: "Flask",
-      icon: "fa-solid fa-pepper-hot",
-      href: "https://flask.palletsprojects.com/en/stable/",
-    },
-  ];
-
   return (
     <motion.div>
       <motion.h1
@@ -97,7 +76,7 @@ export default function FirstImpression() {
         transition={{ delay: 0.7 }}
         animate={{ scale: 1, opacity: 1 }}
         className="text-white mb-3"
-        style={{ fontWeight: 750, fontSize: 75 }}
+        style={{ fontWeight: 750, fontSize: isBrowser ? 75 : 50 }}
       >
         Le développeur Full-Stack qu'il vous faut est ici.
       </motion.h1>
@@ -106,7 +85,7 @@ export default function FirstImpression() {
         transition={{ delay: 1.4, duration: 0.7 }}
         animate={{ scale: 1, opacity: 1 }}
         className="text-secondary mb-3"
-        style={{ fontWeight: 650, fontSize: 40 }}
+        style={{ fontWeight: 650, fontSize: isBrowser ? 40 : 30 }}
       >
         Apps web sur mesure, CRM, API, automations & déploiement sécurisé.
       </motion.h3>
@@ -124,6 +103,7 @@ export default function FirstImpression() {
         >
           {snippets.map((snippet, index) => (
             <DataSnippet
+              key={`dataSnippet-${index}`}
               getUrl={snippet.getUrl}
               subText={snippet.subText}
               delay={2 + index}
@@ -132,40 +112,6 @@ export default function FirstImpression() {
             ></DataSnippet>
           ))}
         </motion.div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3.5, duration: 0.7 }}
-        className="d-flex flex-wrap justify-content-center mt-4"
-      >
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            initial={{ scale: 0.6, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 3.5 + index * 0.2, duration: 0.5 }}
-            className="m-2"
-            style={{ width: 150, height: 150 }}
-          >
-            <p
-              style={{
-                background: `linear-gradient(to right, ${
-                  skill.colorStart ? skill.colorStart : colors[0]
-                }, ${skill.colorEnd ? skill.colorEnd : colors[1]})`,
-              }}
-              className="rounded-2 text-white d-flex justify-content-center align-items-center h-100"
-            >
-              <p className="text-white d-flex flex-column">
-                <i
-                  style={{ fontWeight: 600, fontSize: 80 }}
-                  className={`${skill.icon}`}
-                ></i>
-                <Typewriter words={[skill.text]} loop={1}></Typewriter>
-              </p>
-            </p>
-          </motion.div>
-        ))}
       </motion.div>
     </motion.div>
   );

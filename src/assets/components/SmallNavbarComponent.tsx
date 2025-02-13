@@ -1,3 +1,5 @@
+import { isBrowser } from "react-device-detect";
+
 export interface SmallNavbarElementProps {
   icon: string;
   tooltip: string;
@@ -10,17 +12,21 @@ interface SmallNavbarProps {
 
 export function SmallNavbar({ elements }: SmallNavbarProps) {
   return (
-    <div className="bg-dark w-25 d-flex gap-3 justify-content-around py-2 rounded-5">
-      {elements.map((element) => (
+    <div
+      className={`border border-white bg-dark ${
+        isBrowser ? "w-25" : ""
+      } d-flex gap-3 justify-content-around py-2 rounded-5`}
+    >
+      {elements.map((element, index) => (
         <button
-          className="btn"
+          className="btn btn-sm"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
           title={element.tooltip}
-          key={`sm-navbar-${element.href}`}
+          key={`sm-navbar-${index}`}
           onClick={() => {
             document
-              .querySelector(element.href)
+              .getElementById(element.href)
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >

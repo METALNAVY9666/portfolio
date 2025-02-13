@@ -1,0 +1,42 @@
+[
+  {
+    "text": "React TS",
+    "icon": "fa-brands fa-react",
+    "href": "https://react.dev/learn/typescript"
+  },
+  {
+    "text": "Python Flask",
+    "icon": "fa-solid fa-pepper-hot",
+    "href": "https://flask.palletsprojects.com/en/stable/"
+  },
+  {
+    "text": "PostgreSQL",
+    "icon": "fa-solid fa-database",
+    "href": "https://www.postgresql.org/"
+  },
+  {
+    "text": "JAVA / C#",
+    "icon": "fa-brands fa-java",
+    "href": "https://stackoverflow.com/questions/2625520/java-and-c-how-close-are-they"
+  },
+  {
+    "text": "C",
+    "icon": "fa-solid fa-c",
+    "href": "https://fr.wikipedia.org/wiki/C_(langage)"
+  },
+  {
+    "text": "HTML / JS / CSS",
+    "icon": "fa-brands fa-html5",
+    "href": "https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"
+  },
+  {
+    "text": "Linux",
+    "icon": "fa-brands fa-linux",
+    "href": "https://www.linux.org/"
+  },
+  {
+    "text": "EC2",
+    "icon": "fa-brands fa-aws",
+    "href": "https://aws.amazon.com/"
+  }
+]

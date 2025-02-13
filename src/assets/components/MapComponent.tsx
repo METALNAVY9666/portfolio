@@ -58,7 +58,8 @@ export function MapComponent({ layer, spin = false }: MapComponentProps) {
   useEffect(() => {
     const map = mapInstance.current;
     if (!map || !doneLoading || !layer) return;
-    if (map.getSource("layer") || map.getLayer("layer")) return;
+    if (map.getSource("layer") || map.getLayer("layer") || map.getLayer("line"))
+      return;
     map.addSource("layer", {
       data: layer,
       type: "geojson",
@@ -72,6 +73,7 @@ export function MapComponent({ layer, spin = false }: MapComponentProps) {
         "fill-opacity": 0.6,
       },
     });
+    map.addLayer({ id: "line", type: "line", source: "layer" });
     map.fitBounds(bbox(layer) as BboxType, { padding: 30, duration: 3000 });
     setTimeout(startSpin, 3000);
   }, [doneLoading, layer]);
