@@ -15,6 +15,11 @@
     "href": "https://www.postgresql.org/"
   },
   {
+    "text": "Linux",
+    "icon": "fa-brands fa-linux",
+    "href": "https://www.linux.org/"
+  },
+  {
     "text": "JAVA / C#",
     "icon": "fa-brands fa-java",
     "href": "https://stackoverflow.com/questions/2625520/java-and-c-how-close-are-they"
@@ -28,11 +33,6 @@
     "text": "HTML / JS / CSS",
     "icon": "fa-brands fa-html5",
     "href": "https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"
-  },
-  {
-    "text": "Linux",
-    "icon": "fa-brands fa-linux",
-    "href": "https://www.linux.org/"
   },
   {
     "text": "EC2",

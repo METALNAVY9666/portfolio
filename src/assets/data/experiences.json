@@ -1,0 +1,29 @@
+[
+  {
+    "business": "EAC Partners",
+    "url": "https://eac-partners.fr",
+    "position": "Développeur Full-Stack en Freelance",
+    "start_date": "28-10-2024",
+    "end_date": null,
+    "description": null,
+    "icon": "fa-solid fa-magnifying-glass-chart"
+  },
+  {
+    "business": "IMAKI",
+    "url": "https://imaki.fr",
+    "position": "CEO (auto-entrepreneur)",
+    "start_date": "15-11-2023",
+    "end_date": null,
+    "description": "CRM de gestion de parc automobile, multi-postage, IA, conversion de prospect automatique ...",
+    "icon": "fa-solid fa-car-side"
+  },
+  {
+    "business": "Mefta Hidjab (Rappeur indépendant)",
+    "url": "https://mef.imaki.fr",
+    "position": "Développeur WEB",
+    "start_date": "24-10-2024",
+    "end_date": "05-01-2025",
+    "description": "Création d'un site web",
+    "icon": "fa-solid fa-microphone"
+  }
+]

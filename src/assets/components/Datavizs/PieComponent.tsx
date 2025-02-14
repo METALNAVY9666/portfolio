@@ -1,6 +1,5 @@
 import { PieChart } from "@mui/x-charts";
 import { motion } from "framer-motion";
-import { colors } from "../basics";
 import { Typewriter } from "react-simple-typewriter";
 interface PieData {
   id: string | number;
@@ -59,10 +58,9 @@ export default function Pie({
           slotProps={{
             legend: { hidden: true },
           }}
-          colors={colors}
         />
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="mt-2 d-flex justify-content-center">
         <motion.button
           className="btn btn-dark text-white border-white"
           onClick={() => window.open(source, "_blank")}

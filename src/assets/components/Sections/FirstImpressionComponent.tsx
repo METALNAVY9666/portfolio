@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { isBrowser } from "react-device-detect";
 import { Typewriter } from "react-simple-typewriter";
+import experiences from "../../data/experiences.json";
 
 interface DataSnippetProps {
   getUrl?: string;
+  maxWidth?: number | string;
   subText: string;
   delay: number;
   duration?: number;
@@ -13,6 +15,7 @@ interface DataSnippetProps {
 
 function DataSnippet({
   getUrl,
+  maxWidth,
   subText,
   delay,
   duration = 0.7,
@@ -33,6 +36,7 @@ function DataSnippet({
       transition={{ delay, duration }}
       animate={{ scale: 1, opacity: 1 }}
       className="d-flex flex-column"
+      style={{ maxWidth }}
     >
       <motion.h4
         className="text-black d-flex justify-content-center"
@@ -43,32 +47,32 @@ function DataSnippet({
       >
         {data}
       </motion.h4>
-      <p className="text-secondary">
+      <p className="text-secondary d-flex justify-content-center">
         <Typewriter words={[subText]} loop={1}></Typewriter>
       </p>
     </motion.div>
   );
 }
 
-export default function FirstImpression() {
-  const snippets: DataSnippetProps[] = [
-    {
-      subText: "Années d'expérience",
-      delay: 2.5,
-      defaultValue: 3,
-    },
-    {
-      subText: "Projets terminés",
-      delay: 3.0,
-      defaultValue: 3,
-    },
-    {
-      subText: "Clients",
-      delay: 3,
-      defaultValue: 2,
-    },
-  ];
+const SNIPPETS: DataSnippetProps[] = [
+  {
+    subText: "Années d'expérience",
+    delay: 2.5,
+    defaultValue: 3,
+  },
+  {
+    subText: "Projets terminés",
+    delay: 3.0,
+    defaultValue: 3,
+  },
+  {
+    subText: "Clients",
+    delay: 3,
+    defaultValue: experiences.length,
+  },
+];
 
+export default function FirstImpression() {
   return (
     <motion.div>
       <motion.h1
@@ -89,6 +93,15 @@ export default function FirstImpression() {
       >
         Apps web sur mesure, CRM, API, automations & déploiement sécurisé.
       </motion.h3>
+      <motion.h3
+        initial={{ scale: 0.6, opacity: 0 }}
+        transition={{ delay: 1.7, duration: 0.7 }}
+        animate={{ scale: 1, opacity: 1 }}
+        className="text-white mb-3 d-flex justify-content-center"
+        style={{ fontWeight: 650, fontSize: isBrowser ? 40 : 30 }}
+      >
+        Laissez-moi gérer.
+      </motion.h3>
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
@@ -101,7 +114,7 @@ export default function FirstImpression() {
           transition={{ delay: 2.8, duration: 0.7 }}
           className="bg-white rounded-4 overflow-hidden d-flex justify-content-evenly mx-2"
         >
-          {snippets.map((snippet, index) => (
+          {SNIPPETS.map((snippet, index) => (
             <DataSnippet
               key={`dataSnippet-${index}`}
               getUrl={snippet.getUrl}
@@ -109,6 +122,7 @@ export default function FirstImpression() {
               delay={2 + index}
               duration={0.3}
               defaultValue={snippet.defaultValue}
+              maxWidth={80}
             ></DataSnippet>
           ))}
         </motion.div>

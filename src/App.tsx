@@ -12,13 +12,16 @@ import FirstImpression from "./assets/components/Sections/FirstImpressionCompone
 import Data from "./assets/components/Sections/Data";
 import Stack from "./assets/components/Sections/Stack";
 import { isBrowser } from "react-device-detect";
+import Experiences from "./assets/components/Sections/Experiences";
+import Projects from "./assets/components/Sections/Projects";
+import Contact from "./assets/components/Sections/Contact";
 
 const elements: SmallNavbarElementProps[] = [
   { icon: "home", tooltip: "Accueil", href: "home" },
   { icon: "wrench", tooltip: "Stack", href: "tools" },
   { icon: "folder", tooltip: "Projets", href: "projects" },
   { icon: "suitcase", tooltip: "Expérience", href: "exp" },
-  { icon: "pen-to-square", tooltip: "Contact", href: "home" },
+  { icon: "pen-to-square", tooltip: "Contact", href: "contact" },
 ];
 function App() {
   if (!isBrowser)
@@ -35,11 +38,22 @@ function App() {
         </motion.div>
 
         <FirstImpression></FirstImpression>
-        <PhotoContainer src={firasPhoto} />
-        <div style={{ marginTop: "20vh" }} id="tools">
-          <Stack></Stack>
+        <div className="mt-2">
+          <PhotoContainer src={firasPhoto} />
         </div>
-        <Data></Data>
+        <div id="tools">
+          <Stack></Stack>
+          <Data></Data>
+        </div>
+        <div id="projects" className="mt-3">
+          <Projects />
+        </div>
+        <div id="exp" className="mt-3">
+          <Experiences />
+        </div>
+        <div className="my-5" id="contact">
+          <Contact />
+        </div>
       </div>
     );
   return (
@@ -69,9 +83,18 @@ function App() {
           <div id="home">
             <FirstImpression></FirstImpression>
           </div>
-          <div id="tools">
+          <div id="tools" className="my-4">
             <Stack />
             <Data />
+          </div>
+          <div id="projects" className="mt-3">
+            <Projects />
+          </div>
+          <div id="exp" className="mt-3">
+            <Experiences />
+          </div>
+          <div className="my-5" id="contact">
+            <Contact />
           </div>
         </div>
       </div>

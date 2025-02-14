@@ -1,0 +1,65 @@
+{
+  "xAxis": [1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025],
+  "values": [
+    {
+      "label": "Python",
+      "data": [null, null, 0.92, 0.96, 0.8, 0.8, 0.8, 0.7, 1]
+    },
+    {
+      "label": "C++",
+      "data": [0.27, 0.8, 1, 0.8, 0.7, 0.6, 0.6, 0.6, 0.8]
+    },
+    {
+      "label": "C",
+      "data": [1, 1, 0.8, 1, 1, 0.8, 1, 0.8, 0.7]
+    },
+    {
+      "label": "Java",
+      "data": [null, null, null, 0.7, 0.8, 1, 0.9, 1, 0.6]
+    },
+    {
+      "label": "C#",
+      "data": [null, null, null, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5]
+    },
+    {
+      "label": "JavaScript",
+      "data": [null, null, null, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4]
+    },
+    {
+      "label": "Go",
+      "data": [null, null, null, null, null, 0, 0.1, 0.4, 0.7]
+    },
+    {
+      "label": "Visual Basic",
+      "data": [null, null, null, null, null, 0, 0.05, 0.6]
+    },
+    {
+      "label": "SQL",
+      "data": [null, null, null, null, 0, null, 0.4, 0.4]
+    },
+    {
+      "label": "Fortran",
+      "data": [0.45, 0.33, 0.2, 0.5, 0.6, 0.7, 0.7, 0.7, 0.4]
+    },
+    {
+      "label": "PHP",
+      "data": [null, null, null, 0.1, 0.5, 0.7, 0.6, 0.3, 0.2]
+    },
+    {
+      "label": "Ada",
+      "data": [0.12, 0.15, 0.3, 0.4, 0.4, 0.3, 0.3, 0.3, 0.1]
+    },
+    {
+      "label": "Lisp",
+      "data": [0.08, 0.12, 0.25, 0.4, 0.35, 0.3, 0.3, 0.3, 0.2]
+    },
+    {
+      "label": "Objective-C",
+      "data": [null, null, null, null, 0, 0.1, 0.9, 0.4, 0.1]
+    },
+    {
+      "label": "(Visual) Basic",
+      "data": [0.16, 0.2, 0.12, 0.15, 0.15, 0.2, 0, null, null]
+    }
+  ]
+}
