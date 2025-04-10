@@ -20,9 +20,9 @@ interface InfoProps {
 }
 
 export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
-  const monCodeCommune: string = "77243";
-  const ogSp98 = 1.874; // 13/02/2025 à 17h14
-  const xpLevel = 2.12; // 13/02/2025
+  const monCodeCommune: string = "77183";
+  const ogSp98 = 1.771; // 10/04/2025 à 13h12
+  const xpLevel = 2.33; // 10/04/2025
   const [cityFeature, setCityFeature] = useState<Feature | null>(null);
   const [tjm, setTjm] = useState<number>(199);
   const [sp98, setSp98] = useState<number>(ogSp98);
@@ -39,6 +39,7 @@ export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
   };
 
   useEffect(() => {
+    updateTjm();
     axios
       .get(
         `https://geo.api.gouv.fr/communes/${monCodeCommune}?fields=contour&format=json&geometry=contour`

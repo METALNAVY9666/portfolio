@@ -4,16 +4,16 @@
     "url": "https://eac-partners.fr",
     "position": "Développeur Full-Stack en Freelance",
     "start_date": "28-10-2024",
-    "end_date": null,
+    "end_date": "17-02-2025",
     "description": null,
     "icon": "fa-solid fa-magnifying-glass-chart"
   },
   {
     "business": "IMAKI",
-    "url": "https://imaki.fr",
+    "url": null,
     "position": "CEO (auto-entrepreneur)",
     "start_date": "15-11-2023",
-    "end_date": null,
+    "end_date": "01-01-2025",
     "description": "CRM de gestion de parc automobile, multi-postage, IA, conversion de prospect automatique ...",
     "icon": "fa-solid fa-car-side"
   },
@@ -25,5 +25,14 @@
     "end_date": "05-01-2025",
     "description": "Création d'un site web",
     "icon": "fa-solid fa-microphone"
+  },
+  {
+    "business": "Youdy",
+    "url": "https://youdy.fr",
+    "position": "Développeur Full-Stack en Freelance",
+    "start_date": "18-02-2025",
+    "end_date": null,
+    "description": "Fix de bugs, mise en place de nouvelles fonctionalites",
+    "icon": "fa-solid fa-graduation-cap"
   }
 ]
