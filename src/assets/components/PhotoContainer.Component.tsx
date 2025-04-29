@@ -20,6 +20,7 @@ interface InfoProps {
 }
 
 export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
+  const manualTjm: number = 169; // TJM manuel; 0 pour desactiver
   const monCodeCommune: string = "77183";
   const ogSp98 = 1.771; // 10/04/2025 à 13h12
   const xpLevel = 2.33; // 10/04/2025
@@ -191,12 +192,14 @@ export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
               style={{ fontWeight: 650 }}
             >
               TJM
-              <i
-                style={{ fontSize: 13, cursor: "pointer" }}
-                className="fa-solid fa-circle-info"
-                onClick={() => setShowPopup(true)}
-              ></i>{" "}
-              à partir de {tjm}€
+              {!manualTjm && (
+                <i
+                  style={{ fontSize: 13, cursor: "pointer" }}
+                  className="fa-solid fa-circle-info"
+                  onClick={() => setShowPopup(true)}
+                ></i>
+              )}{" "}
+              à partir de {manualTjm ? manualTjm : tjm}€
             </h1>
             <h2
               className="d-flex justify-content-center"
