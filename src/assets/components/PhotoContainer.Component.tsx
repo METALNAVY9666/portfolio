@@ -29,14 +29,16 @@ export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
   const [showPopup, setShowPopup] = useState<boolean>(false);
   const [showCv, setShowCv] = useState<boolean>(false);
 
-  const updateTjm = async () => {
-    const response = await axios.get(
-      "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/prix-des-carburants-en-france-flux-instantane-v2/records?limit=20&where=ville%3D%27Meaux%27%20and%20adresse%3D%27Rue%20Georges%20Claude%27&select=sp98_prix"
-    );
-    if (response.data.total_count > 0)
-      setSp98(response.data.results[0].sp98_prix);
-    setTimeout(updateTjm, 30000);
-  };
+  const updateTjm = async () =>
+    axios
+      .get(
+        "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/prix-des-carburants-en-france-flux-instantane-v2/records?limit=20&where=ville%3D%27Meaux%27%20and%20adresse%3D%27Rue%20Georges%20Claude%27&select=sp98_prix"
+      )
+      .then((response) => {
+        if (response.data.total_count > 0)
+          setSp98(response.data.results[0].sp98_prix);
+        setTimeout(updateTjm, 30000);
+      });
 
   useEffect(() => {
     updateTjm();
