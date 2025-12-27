@@ -20,10 +20,10 @@ interface InfoProps {
 }
 
 export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
-  const manualTjm: number = 169; // TJM manuel; 0 pour desactiver
-  const monCodeCommune: string = "77183";
+  const manualTjm: number = 0; // TJM manuel; 0 pour desactiver
+  const monCodeCommune: string = "95127";
   const ogSp98 = 1.771; // 10/04/2025 à 13h12
-  const xpLevel = 2.33; // 10/04/2025
+  const xpLevel = 3.1; // 27/12/2025
   const [cityFeature, setCityFeature] = useState<Feature | null>(null);
   const [tjm, setTjm] = useState<number>(199);
   const [sp98, setSp98] = useState<number>(ogSp98);
@@ -78,24 +78,6 @@ export default function PhotoContainer({ src, alt }: PhotoContainerProps) {
           <p className="my-2">
             Le TJM (taux journalier moyen) est calculé <b>dynamiquement</b> en
             fonction de l'inflation et de mon expérience.
-          </p>
-          <p>xpLevel (expérience): {xpLevel}</p>
-          <p>sp98 (Prix du litre de sp98 à Meaux) : {sp98}</p>
-          <p>
-            <b>Formule:</b> <br />
-            <span style={{ fontSize: "1.2em" }}>
-              TJM = <span style={{ fontStyle: "italic" }}>sp98</span> × 50 ×{" "}
-              <span style={{ fontStyle: "italic" }}>xpLevel</span>
-            </span>
-          </p>
-          <p>
-            <b>Résultat:</b> <br />
-            <span style={{ fontSize: "1.2em" }}>
-              TJM = <span style={{ fontStyle: "italic" }}>{sp98}</span> × 50 ×{" "}
-              <span style={{ fontStyle: "italic" }}>{xpLevel}</span> ={" "}
-              <span style={{ fontStyle: "italic" }}>{sp98 * xpLevel * 50}</span>{" "}
-              ≈ <span style={{ fontStyle: "italic" }}>{tjm}</span>
-            </span>
           </p>
         </Modal.Body>
         <Modal.Footer>

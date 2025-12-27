@@ -5,8 +5,8 @@
     "position": "Développeur Full-Stack en Freelance",
     "start_date": "28-10-2024",
     "end_date": "17-02-2025",
-    "description": null,
-    "icon": "fa-solid fa-magnifying-glass-chart"
+    "description": "Mise en place de datavizs, intégration IA et gestion de base de données INSEE.",
+    "icon": "https://eac-partners.fr/images/9f19dfadbb8cbd103164e0c7996d152e.svg"
   },
   {
     "business": "IMAKI",
@@ -15,24 +15,24 @@
     "start_date": "15-11-2023",
     "end_date": "01-01-2025",
     "description": "CRM de gestion de parc automobile, multi-postage, IA, conversion de prospect automatique ...",
-    "icon": "fa-solid fa-car-side"
+    "icon": "https://d144mzi0q5mijx.cloudfront.net/img/I/M/Imaki.png"
   },
   {
     "business": "Mefta Hidjab (Rappeur indépendant)",
-    "url": "https://mef.imaki.fr",
+    "url": null,
     "position": "Développeur WEB",
     "start_date": "24-10-2024",
     "end_date": "05-01-2025",
     "description": "Création d'un site web",
-    "icon": "fa-solid fa-microphone"
+    "icon": "https://cdn2.iconfinder.com/data/icons/people-3-2/128/Rapper-Rap-Musician-Hip-Hop-Urban-Man-1024.png"
   },
   {
     "business": "Youdy",
     "url": "https://youdy.fr",
     "position": "Développeur Full-Stack en Freelance",
     "start_date": "18-02-2025",
-    "end_date": null,
+    "end_date": "15-10-2025",
     "description": "Fix de bugs, mise en place de nouvelles fonctionalites",
-    "icon": "fa-solid fa-graduation-cap"
+    "icon": "https://www.mondedesgrandesecoles.fr/wp-content/uploads/2024/01/f8bd86_ba654ebff4fb497c8f4fc2bb8b9e1e00mv2-2048x2048.png"
   }
 ]

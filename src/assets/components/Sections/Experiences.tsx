@@ -39,9 +39,13 @@ export default function Experiences() {
               transition={{ duration: 0.5, delay: 3 + index / 2 }}
             >
               <motion.h2>
-                <i
-                  className={experience.icon ? experience.icon : undefined}
-                ></i>{" "}
+                {experience.icon ? (
+                  <img
+                    src={experience.icon}
+                    style={{ width: 96 }}
+                    className="me-3"
+                  ></img>
+                ) : null}
                 {experience.position} avec{" "}
                 <a
                   className="text-dark"
