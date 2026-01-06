@@ -1,21 +1,26 @@
 [
   {
+    "id": "instagram",
     "icon": "fa-brands fa-instagram",
     "href": "https://www.instagram.com/firas.zaazaa"
   },
   {
+    "id": "mail",
     "icon": "fa-solid fa-envelope",
-    "href": "mailto:firas.zaazaa@gmail.com?Subject=Prenons%20contact"
+    "href": "mailto:contact@firaszaazaa.fr?Subject=Prenons%20contact"
   },
   {
+    "id": "github",
     "icon": "fa-brands fa-github",
     "href": "https://github.com/metalnavy9666"
   },
   {
+    "id": "linkedin",
     "icon": "fa-brands fa-linkedin",
     "href": "https://www.linkedin.com/in/firas-zaazaa/"
   },
   {
+    "id": "phone",
     "icon": "fa-solid fa-phone",
     "href": "tel:+33616175795"
   }
